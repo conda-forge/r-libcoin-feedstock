@@ -1,4 +1,4 @@
-{% set version = '1.0-5' %}
+{% set version = "1.0-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/libcoin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/libcoin/libcoin_{{ version }}.tar.gz
-  sha256: 0a744164e00557d2f3e888d14cfd6108d17c14e983db620f74c7a5475be8a9b2
+  sha256: 48afc1415fc89b29e4f2c8b6f6db3cffef1531580e5c806ad7cacf4afe6a4e5a
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,13 +46,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=libcoin
   license: GPL-2
-  summary: Basic infrastructure for linear test statistics and permutation inference in the framework
-    of Strasser and Weber (1999) <http://epub.wu.ac.at/102/>. This package must not
-    be used by end-users. CRAN package 'coin' implements all user interfaces and is
-    ready to be used by anyone.
+  summary: Basic infrastructure for linear test statistics and permutation inference in the framework of Strasser and Weber (1999) <http://epub.wu.ac.at/102/>. This package must not be used by end-users. CRAN package 'coin' implements all user interfaces and is ready to be used by anyone.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
