@@ -1,4 +1,4 @@
-{% set version = "1.0-6" %}
+{% set version = "1.0-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/libcoin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/libcoin/libcoin_{{ version }}.tar.gz
-  sha256: 48afc1415fc89b29e4f2c8b6f6db3cffef1531580e5c806ad7cacf4afe6a4e5a
+  sha256: 96f68426879e498b2e90486453cc6b608fd0d512bc35e66cbb62df3df80d62ed
 
 build:
   merge_build_host: true  # [win]
