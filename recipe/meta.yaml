@@ -1,6 +1,5 @@
 {% set version = "1.0-10" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-libcoin
@@ -13,8 +12,7 @@ source:
   sha256: 3023e0495d0789765bdf04c0ef0990a57b48fefa322c55f20e250d2d70d67eaf
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -35,7 +35,6 @@ requirements:
     - r-mvtnorm
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mvtnorm
 
 test:
