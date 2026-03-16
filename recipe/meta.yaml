@@ -1,4 +1,4 @@
-{% set version = "1.0-11" %}
+{% set version = "1.0-12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/libcoin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/libcoin/libcoin_{{ version }}.tar.gz
-  sha256: e0e17bc9343f03e0b8501df5c33d75334e7622aa78cdfaa39109c350819dd1ee
+  sha256: a189017d3c9b1649e7c0c33cc8fa6efa897c71b40c3a7b0afad734c202ee1945
 
 build:
   number: 0
