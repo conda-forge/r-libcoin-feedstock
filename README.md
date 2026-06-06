@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-libcoin-feeds
 About r-libcoin
 ---------------
 
-Home: https://CRAN.R-project.org/package=libcoin
+Home: https://codeberg.org/thothorn/coin/
 
 Package license: GPL-2.0-only
 
@@ -16,7 +16,7 @@ Summary: Basic infrastructure for linear test statistics and permutation inferen
 About r-libcoin
 ---------------
 
-Home: https://CRAN.R-project.org/package=libcoin
+Home: https://codeberg.org/thothorn/coin/
 
 Package license: GPL-2.0-only
 
